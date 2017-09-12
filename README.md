@@ -16,9 +16,21 @@ unixsocket /var/run/redis/redis.sock
 unixsocketperm 777
 ```
 
-mysql
+mysql/conf.d/docker.cnf
 ```
 [mysqld]
 skip-host-cache
 skip-name-resolve
 ```
+
+### 使用
+`git clone https://github.com/cloverzrg/nginx-php-mysql-redis-docker.git`
+在代码文件夹下执行
+`docker-compose build`
+构建成功后,启动
+`docker-compose up`
+
+### 数据
+网站代码位于 www 中
+mysql 数据位于 mysql/data 中
+redis 数据位于 redis/data 中
