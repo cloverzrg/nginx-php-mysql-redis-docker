@@ -5,6 +5,7 @@
 php.ini
 ```
 session.save_handler = redis
+session.save_path = "unix:/var/run/redis/redis.sock"
 display_errors = On
 ```
 
