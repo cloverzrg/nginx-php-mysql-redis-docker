@@ -1,0 +1,19 @@
+version: '3'
+services:
+    nginx-php-redis:
+        build: ./nginx-php
+        volumes:
+        - "./www:/var/www"
+        - "./redis/data:/var/lib/redis"
+        ports:
+        - "127.0.0.1:80:80"
+        - "127.0.0.1:6379:6379"
+    mysql:
+        image: "mysql"
+        ports:
+        - "127.0.0.1:3306:3306"
+        environment:
+        - "MYSQL_ROOT_PASSWORD=root"
+        volumes:
+        - "./mysql/data:/var/lib/mysql"
+        - "./mysql/conf.d:/etc/mysql/conf.d"
