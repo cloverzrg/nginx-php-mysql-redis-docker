@@ -8,11 +8,13 @@ RUN apt-get install nginx php php-fpm -y apt-utils redis-server
 RUN apt-get install -y \
     php-curl \
     php-redis \
-    php-memcache \
     php-gd \
     php-mysqli \
     php-pdo-mysql \
-    php-xml
+    php-xml \
+    php-mcrypt \
+    php-mbstring \
+    php-zip
 
 # 按需安装 PHP 扩展
 RUN apt-get clean \
