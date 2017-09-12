@@ -35,7 +35,7 @@ skip-name-resolve
 
 `docker-compose up`
 
-### 数据
+### 数据(volume)
 网站代码位于 www 中
 
 mysql 数据位于 mysql/data 中
