@@ -29,8 +29,6 @@ COPY start.sh /start.sh
 RUN chmod +x /start.sh
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY conf.d /etc/nginx/conf.d
-RUN rm -f /etc/nginx/sites-enabled/*
-COPY sites-enabled /etc/nginx/sites-enabled
 COPY php.ini /etc/php/7.0/fpm/php.ini
 COPY redis.conf /etc/redis/redis.conf
 EXPOSE 80
