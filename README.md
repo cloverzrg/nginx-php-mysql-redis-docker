@@ -1,6 +1,6 @@
 ### ubuntu nginx php redis mysql
 
-##### 修改默认配置文件的地方
+##### 默认配置文件修改的地方
 
 php.ini
 ```
