@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:xenial
 COPY sources.list /etc/apt/sources.list
 # 替换为国内软件源
 RUN apt-get update  && apt-get dist-upgrade -y
