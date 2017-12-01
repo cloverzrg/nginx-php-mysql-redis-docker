@@ -3,7 +3,7 @@ COPY sources.list /etc/apt/sources.list
 # 替换为国内软件源
 RUN apt-get update  && apt-get dist-upgrade -y
 # 更新源
-RUN apt-get install nginx php php-fpm -y apt-utils redis-server
+RUN apt-get install -y nginx php php-fpm  apt-utils redis-server composer
 # 安装 nginx 和 php
 RUN apt-get install -y \
     php-curl \
